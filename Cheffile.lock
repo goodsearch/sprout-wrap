@@ -117,6 +117,12 @@ GIT
       osx (>= 0.0.0)
 
 PATH
+  remote: ../chef-good_station
+  specs:
+    good_station (0.1.0)
+      sprout-osx-base (>= 0.0.0)
+
+PATH
   remote: site-cookbooks/meta
   specs:
     meta (0.1.1)
@@ -126,6 +132,7 @@ PATH
       sprout-pivotal (>= 0.0.0)
 
 DEPENDENCIES
+  good_station (>= 0)
   meta (>= 0)
   osx (>= 0)
   pivotal_workstation (>= 0)
