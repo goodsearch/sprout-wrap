@@ -117,10 +117,9 @@ GIT
       osx (>= 0.0.0)
 
 PATH
-  remote: ../chef-good_station
+  remote: ../gops/cookbooks/good_station
   specs:
     good_station (0.1.0)
-      sprout-osx-base (>= 0.0.0)
 
 PATH
   remote: site-cookbooks/meta
