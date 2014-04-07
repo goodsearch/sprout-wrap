@@ -29,7 +29,7 @@ brew_install ruby-install
 (cd ~/code; [ ! -d gops ] && git clone git@github.com:goodsearch/gops.git; cd gops; git pull)
 cd ~/code/sprout-wrap
 
-[ ! -d /opt/rubies/ruby-$ruby_version ] && ruby-install ruby $ruby_version
+[ ! -d /opt/rubies/ruby-$ruby_version ] && sudo ruby-install ruby $ruby_version
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 chruby ruby $ruby_version
 
