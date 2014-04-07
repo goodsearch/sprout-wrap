@@ -55,19 +55,32 @@ recipes:
 - sprout-homebrew
 
 node_attributes:
-#  git_pairs_domain: pivotallabs.com
-#  git_pairs_authors:
-#    - initials: ah
-#      name: Abhijit Hiremagalur
-#      shortname: abhi
-#    - initials: bc
-#      name: Brian Cunnie
-#      shortname: cunnie
-#    - initials: jrhb
-#      name: Jonathan Barnes
-#    - initials: lw
-#      name: Luke Winikates
-#      shortname: lwinikates
+  git_pairs_domain: goodsearch.com
+  git_pairs_authors:
+    - initials: pk
+      name: Pablo Kang
+      shortname: pablo.kang
+    - initials: nl
+      name: Nero Leung
+      shortname: nero.leung
+    - initials: me
+      name: Matt Esch
+      shortname: matt.esch
+    - initials: dj
+      name: Daniel Jacobs
+      shortname: daniel.jacobs
+    - initials: es
+      name: Evan Sherwood
+      shortname: evan.sherwood
+    - initials: mw
+      name: Mary Wong
+      shortname: mary.wong
+    - initials: gr
+      name: Greggory Rothmeier
+      shortname: gregg.rothmeier
+    - initials: sa
+      name: Sufyan Adam
+      shortname: sufyan.adam
   git_projects:
     -
       - sprout-wrap
@@ -82,8 +95,9 @@ node_attributes:
       casks:
         - dropbox
         - firefox
-#        - gitx-rowanj
         - google-chrome
-#        - skype
-#        - vagrant
         - virtualbox
+        - zooom
+#        - skype
+#        - gitx-rowanj
+#        - vagrant
