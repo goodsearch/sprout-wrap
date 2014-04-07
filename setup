@@ -19,36 +19,23 @@ brew_install() {
   done
 }
 
-ruby_setup() {
-  local ruby_version=2.1.1
+ruby_version=2.1.1
 
-  setup_homebrew
-  brew_install git
-  brew_install chruby
-  brew_install ruby-install
+setup_homebrew
+brew_install git
+brew_install chruby
+brew_install ruby-install
 
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
-  chruby ruby $ruby_version
-  if [ -z "$(gem list bundler | grep bundler)" ]; then
-    gem install bundler
-  fi
-  unset RUBYOPT # [pk] this flag trips up rubygems native installs; unset it
-}
+(cd ~/code; [ ! -d gops ] && git clone git@github.com:goodsearch/gops.git; cd gops; git pull)
+cd ~/code/sprout-wrap
 
-sprout_install() {
-  (cd ~/code; [ ! -d gops ] && git clone git@github.com:goodsearch/gops.git; cd gops; git pull)
+[ ! -d /opt/rubies/ruby-$ruby_version ] && ruby-install ruby $ruby_version
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby ruby $ruby_version
 
-  cd ~/code/sprout-wrap
-  bundle
-  bundle exec soloist
-}
+gem install bundler --no-ri --no-rdoc
 
-ruby_setup
-sprout_install
-
-cd ~
-mr up
-
-cd ~/code/good_rails
-bin/bootstrap.sh
+unset RUBYOPT # [pk] this flag trips up rubygems native installs; unset it
 bundle
+
+bundle exec soloist
