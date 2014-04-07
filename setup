@@ -1,0 +1,54 @@
+#!/bin/sh
+
+#setup_vim() {
+#  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#  vim +PluginInstall +qall
+#}
+
+setup_homebrew() {
+  if [ "$(which brew)" != '/usr/local/bin/brew' ]; then
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  fi
+}
+
+brew_install() {
+  for package in $@; do
+    if [ -n "$(brew info $package | grep 'Not installed')" ]; then
+      brew install $package
+    fi
+  done
+}
+
+ruby_setup() {
+  local ruby_version=2.1.1
+
+  setup_homebrew
+  brew_install git
+  brew_install chruby
+  brew_install ruby-install
+
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  chruby ruby $ruby_version
+  if [ -z "$(gem list bundler | grep bundler)" ]; then
+    gem install bundler
+  fi
+  unset RUBYOPT # [pk] this flag trips up rubygems native installs; unset it
+}
+
+sprout_install() {
+  (cd ~/code; [ ! -d gops ] && git clone git@github.com:goodsearch/gops.git; cd gops; git pull)
+
+  cd ~/code/sprout-wrap
+  bundle
+  bundle exec soloist
+}
+
+ruby_setup
+sprout_install
+
+cd ~
+mr up
+
+cd ~/code/good_rails
+bin/bootstrap.sh
+bundle
