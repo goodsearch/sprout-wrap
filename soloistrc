@@ -4,7 +4,7 @@ recipes:
 - sprout-osx-base::bash_it
 - pivotal_workstation::create_var_chef_cache
 - sprout-osx-base::homebrew
-- good_station::setup
+- good_station
 
 # settings
 #- pivotal_workstation::sshd_on
