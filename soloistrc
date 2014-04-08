@@ -38,7 +38,7 @@ recipes:
 - sprout-osx-apps::menumeters
 - sprout-osx-apps::ccmenu
 - pivotal_workstation::github_for_mac
-- sprout-osx-apps::iterm2
+#- sprout-osx-apps::iterm2
 - sprout-osx-apps::keycastr
 
 ## apps (editors)
