@@ -1,9 +1,4 @@
-#!/bin/sh
-
-#setup_vim() {
-#  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-#  vim +PluginInstall +qall
-#}
+#!/bin/bash
 
 setup_homebrew() {
   if [ "$(which brew)" != '/usr/local/bin/brew' ]; then
@@ -19,23 +14,35 @@ brew_install() {
   done
 }
 
-ruby_version=2.1.1
+rvm_install() {
+  local ruby_version=2.1.1
+
+  if [ ! -f ~/.rvm/bin/rvm ]; then
+    \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
+  fi
+
+  if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+      # First try to load from a user install
+      source "$HOME/.rvm/scripts/rvm"
+  fi
+
+  if [ -z "$(rvm list rubies | grep $ruby_version)" ]; then
+    rvm install ruby-$ruby_version
+  fi
+  rvm use ruby-$ruby_version
+}
 
 setup_homebrew
 brew_install git
-brew_install chruby
-brew_install ruby-install
+rvm_install
 
 (cd ~/code; [ ! -d gops ] && git clone git@github.com:goodsearch/gops.git; cd gops; git pull)
 cd ~/code/sprout-wrap
 
-[ ! -d /opt/rubies/ruby-$ruby_version ] && sudo ruby-install ruby $ruby_version
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby ruby $ruby_version
-
-gem install bundler --no-ri --no-rdoc
+if [ -z "$(gem list bundler)" ]; then
+  gem install bundler --no-ri --no-rdoc
+fi
 
 unset RUBYOPT # [pk] this flag trips up rubygems native installs; unset it
 bundle
-
 bundle exec soloist
