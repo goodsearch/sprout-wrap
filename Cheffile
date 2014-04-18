@@ -2,8 +2,8 @@
 
 site 'http://community.opscode.com/api/v1'
 
-cookbook 'good_station',
-  :path => '../gops/cookbooks/good_station'
+cookbook 'role_station',
+  :path => '../gops/cookbooks/role_station'
 
 cookbook 'meta',
   :path => 'site-cookbooks/meta'
