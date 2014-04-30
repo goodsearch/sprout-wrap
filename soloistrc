@@ -77,13 +77,14 @@ node_attributes:
       shortname: mary.wong
     - initials: gr
       name: Greggory Rothmeier
-      shortname: gregg.rothmeier
+      shortname: greggory.rothmeier
     - initials: sa
       name: Sufyan Adam
       shortname: sufyan.adam
-    - initials: zp
-      name: Zachary Patten
-      shortname: zachary.patten
+    - initials: rw
+      name: Rodney Weaver
+      shortname: rodney.weaver
+
   git_projects:
     -
       - sprout-wrap
