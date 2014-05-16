@@ -8,113 +8,136 @@ GIT
   remote: https://github.com/pivotal-sprout/sprout
   path: osx
   ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
+  sha: 13741b29c0447d257e43955b6c65368332e1c9a0
   specs:
     osx (0.1.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout
-  path: pivotal_workstation
-  ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
-  specs:
-    pivotal_workstation (1.0.0)
-      dmg (>= 0.0.0)
-      homebrew (>= 0.0.0)
-      osx (>= 0.0.0)
-      sprout-osx-apps (>= 0.0.0)
-      sprout-osx-base (>= 0.0.0)
-      sprout-osx-settings (>= 0.0.0)
-      sprout-pivotal (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout
   path: sprout-osx-apps
   ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
+  sha: 13741b29c0447d257e43955b6c65368332e1c9a0
   specs:
     sprout-osx-apps (0.1.0)
       dmg (>= 0.0.0)
       homebrew (>= 0.0.0)
-      sprout-osx-base (>= 0.0.0)
+      sprout-base (>= 0.0.0)
       sprout-osx-settings (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: sprout-osx-base
-  ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
-  specs:
-    sprout-osx-base (0.1.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: sprout-osx-git
-  ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
-  specs:
-    sprout-osx-git (0.1.0)
-      homebrew (>= 0.0.0)
-      sprout-osx-base (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: sprout-osx-rbenv
-  ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
-  specs:
-    sprout-osx-rbenv (0.1.0)
-      homebrew (>= 0.0.0)
-      sprout-osx-base (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: sprout-osx-rubymine
-  ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
-  specs:
-    sprout-osx-rubymine (0.1.0)
-      homebrew (>= 0.0.0)
-      sprout-osx-apps (>= 0.0.0)
-      sprout-osx-base (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: sprout-osx-settings
-  ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
-  specs:
-    sprout-osx-settings (0.1.0)
-      homebrew (>= 0.0.0)
-      osx (>= 0.0.0)
-      sprout-osx-base (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout
   path: sprout-pivotal
   ref: master
-  sha: c141d32287df86bc965639347d9b72f17fb0d7e9
+  sha: 13741b29c0447d257e43955b6c65368332e1c9a0
   specs:
     sprout-pivotal (0.1.0)
       dmg (>= 0.0.0)
       homebrew (>= 0.0.0)
-      sprout-osx-base (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-base
+  ref: master
+  sha: e2649562c9ca53944d80380b1d95beb9c61df60e
+  specs:
+    sprout-base (0.1.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-git
+  ref: master
+  sha: b88e8e4a47ddcd9855f8ee4a9d9805bf510454bc
+  specs:
+    sprout-git (0.1.0)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-homebrew
   ref: master
-  sha: 25251cec3bc0325fcc2f3b6ebb5ce3d135414cca
+  sha: d9e32e8a3a5fca6be63632f357160eac6ff7d980
   specs:
     sprout-homebrew (0.1.0)
+      homebrew (~> 1.5.4)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-mysql
+  ref: master
+  sha: ab0136970039502acfd8855eeceae426f0073127
+  specs:
+    sprout-mysql (0.1.0)
       homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-osx-settings
+  ref: master
+  sha: 342fa674efa39034d37e9ada83d9c18b46a772e8
+  specs:
+    sprout-osx-settings (0.1.0)
+      homebrew (>= 0.0.0)
+      osx (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-postgresql
+  ref: master
+  sha: 9abc130c573fd41bb51ec7959fc89678b2c8da46
+  specs:
+    sprout-postgresql (0.1.0)
+      homebrew (~> 1.5.4)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-rbenv
+  ref: master
+  sha: 1e2e99e9642762c9c5e7e99a0fecabeba655c8ef
+  specs:
+    sprout-rbenv (0.1.0)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-ruby
+  ref: master
+  sha: dfc96330f8dee89f96c0f2e14dce87c7e03a2359
+  specs:
+    sprout-ruby (0.1.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-rubymine
+  ref: master
+  sha: 4db34901eb9358a80bfc05e3c9d9baf8525a0b40
+  specs:
+    sprout-rubymine (0.1.0)
+      sprout-base (>= 0.0.0)
+      sprout-homebrew (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-ssh
+  ref: master
+  sha: 157fffbc948ceecb1ae7caa5ff3732137a628589
+  specs:
+    sprout-ssh (0.1.0)
+      sprout-base (>= 0.0.0)
+      sprout-osx-settings (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-terminal
   ref: master
-  sha: d238fd546063112c9536317f1912a649af6b16f1
+  sha: c0d4b4311d405d7391ebb5ec30221d8dbedf0682
   specs:
-    sprout-terminal (0.2.0)
+    sprout-terminal (0.1.0)
       osx (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal/pivotal_workstation
+  ref: master
+  sha: a534a47d4311dd69497bf3e3c57bb6ca3dab8e32
+  specs:
+    pivotal_workstation (1.0.0)
+      dmg (>= 0.0.0)
 
 PATH
   remote: ../gops/cookbooks/role_station
@@ -126,9 +149,6 @@ PATH
   remote: site-cookbooks/meta
   specs:
     meta (0.1.1)
-      pivotal_workstation (>= 0.0.0)
-      sprout-osx-apps (>= 0.0.0)
-      sprout-osx-settings (>= 0.0.0)
       sprout-pivotal (>= 0.0.0)
 
 DEPENDENCIES
@@ -136,13 +156,17 @@ DEPENDENCIES
   osx (>= 0)
   pivotal_workstation (>= 0)
   role_station (>= 0)
+  sprout-base (>= 0)
+  sprout-git (>= 0)
   sprout-homebrew (>= 0)
+  sprout-mysql (>= 0)
   sprout-osx-apps (>= 0)
-  sprout-osx-base (>= 0)
-  sprout-osx-git (>= 0)
-  sprout-osx-rbenv (>= 0)
-  sprout-osx-rubymine (>= 0)
   sprout-osx-settings (>= 0)
   sprout-pivotal (>= 0)
+  sprout-postgresql (>= 0)
+  sprout-rbenv (>= 0)
+  sprout-ruby (>= 0)
+  sprout-rubymine (>= 0)
+  sprout-ssh (>= 0)
   sprout-terminal (>= 0)
 

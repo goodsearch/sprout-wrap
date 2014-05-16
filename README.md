@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/pivotal-sprout/sprout-wrap.png?branch=master)](https://travis-ci.org/pivotal-sprout/sprout-wrap)
 
 This project uses [soloist](https://github.com/mkocher/soloist) and [librarian-chef](https://github.com/applicationsonline/librarian-chef)
-to run a subset of the recipes in sprout's [cookbooks]((https://github.com/pivotal-sprout/sprout).
+to run a subset of the recipes in sprout's cookbooks.
 
 [Fork it](https://github.com/pivotal-sprout/sprout-wrap/fork) to 
 customize its [attributes](http://docs.opscode.com/chef_overview_attributes.html) in [soloistrc](/soloistrc) and the list of recipes 
@@ -24,7 +24,9 @@ Don't forget to start up Xcode once it's installed so that you can agree to the 
 ### 2. Install Command Line Tools
   
     xcode-select --install
-  
+
+If you receive a message about the update server being unavailable and are on Mavericks, then you already have the command line tools.
+
 ### 3. Clone this project
 
     git clone https://github.com/pivotal-sprout/sprout-wrap.git
@@ -36,6 +38,14 @@ If you're running under rvm or rbenv, you shouldn't preface the following comman
 
     sudo gem install bundler
     sudo bundle
+
+If you receive errors like this:
+
+    clang: error: unknown argument: '-multiply_definedsuppress'
+
+then try downgrading those errors like this:
+
+    sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle
 
 ### 5. Run soloist
 
