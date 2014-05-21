@@ -4,7 +4,6 @@ recipes:
 - sprout-base::bash_it
 - pivotal_workstation::create_var_chef_cache
 - sprout-base::homebrew
-- role_station::setup
 
 # settings
 #- pivotal_workstation::sshd_on
@@ -51,6 +50,8 @@ recipes:
 
 - sprout-osx-apps::rubymine
 #- sprout-osx-rubymine::preferences
+
+- role_station::setup
 
 - sprout-homebrew
 
