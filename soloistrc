@@ -85,6 +85,9 @@ node_attributes:
     - initials: rw
       name: Rodney Weaver
       shortname: rodney.weaver
+    - initials: jf
+      name: John Figueiredo 
+      shortname: john.figueiredo
 
   git_projects:
     -
